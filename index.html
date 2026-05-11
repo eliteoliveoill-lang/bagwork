@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Bag Work Athletics</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#0a0a0a;
+  color:white;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 60px;
+  border-bottom:1px solid #1c1c1c;
+  position:sticky;
+  top:0;
+  background:#0a0a0a;
+  z-index:100;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  opacity:.8;
+  transition:.3s;
+  font-size:14px;
+}
+
+nav a:hover{
+  opacity:1;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{
+  font-size:70px;
+  font-weight:900;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:#b5b5b5;
+  font-size:18px;
+}
+
+.section{
+  padding:40px 60px;
+}
+
+.section h2{
+  font-size:40px;
+  margin-bottom:35px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#151515;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  background:#1f1f1f;
+}
+
+.info{
+  padding:20px;
+}
+
+.info h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.price{
+  color:#c7c7c7;
+  margin-bottom:18px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:white;
+  color:black;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#d8d8d8;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+}
+
+#cart-button{
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+  font-size:14px;
+  opacity:.8;
+  transition:.3s;
+}
+
+#cart-button:hover{
+  opacity:1;
+}
+
+#cart-total{
+  margin-top:25px;
+  padding-top:20px;
+  border-top:1px solid #222;
+  font-size:22px;
+  font-weight:700;
+}
+
+.remove-btn{
+  margin-top:12px;
+  background:#1f1f1f;
+  color:white;
+  border:1px solid #333;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.remove-btn:hover{
+  background:#2b2b2b;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">BAG WORK</div>
+
+<nav>
+    <button id="cart-button">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+  <a href="#shorts">Shorts</a>
+  <a href="#hoodies">Hoodies</a>
+  <a href="#tshirts">T-Shirts</a>
+  <a href="#pants">Pants</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>BAG WORK ATHLETICS</h1>
+
+<p>
+Seattle, WA
+</p>
+
+</section>
+
+<!-- SHORTS -->
+
+<section class="section" id="shorts">
+
+<h2>Shorts</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="Black Seattle BW Shorts.png" alt="Black Seattle Shorts">
+
+<div class="info">
+<h3>Seattle Mesh Shorts Black</h3>
+<p class="price">$48</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="White Seattle BW Shorts.png" alt="White Seattle Shorts">
+
+<div class="info">
+<h3>Seattle Mesh Shorts White</h3>
+<p class="price">$48</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Xray BW Shorts.png" alt="Xray Shorts">
+
+<div class="info">
+<h3>X-Ray BW Shorts</h3>
+<p class="price">$48</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- HOODIES -->
+
+<section class="section" id="hoodies">
+
+<h2>Hoodies</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="White BW Hoodie.png" alt="White Hoodie">
+
+<div class="info">
+<h3>White BW Hoodie</h3>
+<p class="price">$84</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Black BW Hoodie.png" alt="Black Hoodie">
+
+<div class="info">
+<h3>Black BW Hoodie</h3>
+<p class="price">$84</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="BW Tech.png" alt="BW Tech">
+
+<div class="info">
+<h3>BW Tech</h3>
+<p class="price">$120</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- TSHIRTS -->
+
+<section class="section" id="tshirts">
+
+<h2>T-Shirts & Compression</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="White Tshirt.png" alt="White Tshirt">
+
+<div class="info">
+<h3>White BW Tee</h3>
+<p class="price">$52</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Black Tshirt.png" alt="Black Tshirt">
+
+<div class="info">
+<h3>Black BW Tee</h3>
+<p class="price">$52</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Gray Tshirt.png" alt="Gray Tshirt">
+
+<div class="info">
+<h3>Gray BW Tee</h3>
+<p class="price">$52</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="White Compression.png" alt="White Compression">
+
+<div class="info">
+<h3>White Compression Tee</h3>
+<p class="price">$40</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Black Compression.png" alt="Black Compression">
+
+<div class="info">
+<h3>Black Compression Tee</h3>
+<p class="price">$40</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PANTS -->
+
+<section class="section" id="pants">
+
+<h2>Pants</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="Black Sweatpants.png" alt="Sweatpants">
+
+<div class="info">
+<h3>BW Sweatpants</h3>
+<p class="price">$74</p>
+<button>Add To Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 BAG WORK ATHLETICS
+
+</footer>
+
+<!-- CART SIDEBAR -->
+
+<div id="cart-sidebar">
+
+    <div class="cart-top">
+      <h2>Your Cart</h2>
+      <button id="close-cart">X</button>
+    </div>
+  
+    <div id="cart-items"></div>
+
+    <div id="cart-total">
+        Total: $<span id="total-price">0</span>
+      </div>
+      
+      <button id="checkout-btn">
+        Checkout
+      </button>
+  
+  </div>
+  
+  <style>
+  
+  #checkout-btn{
+  width:100%;
+  margin-top:20px;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:white;
+  color:black;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+}
+
+#checkout-btn:hover{
+  background:#d9d9d9;
+}
+
+  #cart-sidebar{
+    position:fixed;
+    top:0;
+    right:-400px;
+    width:350px;
+    height:100vh;
+    background:#111;
+    border-left:1px solid #222;
+    padding:25px;
+    transition:.4s;
+    z-index:1000;
+    overflow-y:auto;
+  }
+  
+  #cart-sidebar.active{
+    right:0;
+  }
+  
+  .cart-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+  }
+  
+  .cart-top h2{
+    font-size:28px;
+  }
+  
+  #close-cart{
+    background:none;
+    border:none;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+  }
+  
+  .cart-item{
+    border-bottom:1px solid #222;
+    padding:15px 0;
+  }
+  
+  .cart-item h4{
+    margin-bottom:8px;
+  }
+  
+  .cart-item p{
+    color:#aaa;
+  }
+  
+  </style>
+  
+  <script>
+  
+  let cart = [];
+  
+  const buttons =
+  document.querySelectorAll(".card button");
+  
+  const cartCount =
+  document.getElementById("cart-count");
+  
+  const cartItems =
+  document.getElementById("cart-items");
+  
+  const cartSidebar =
+  document.getElementById("cart-sidebar");
+  
+  const cartButton =
+  document.getElementById("cart-button");
+  
+  const closeCart =
+  document.getElementById("close-cart");
+  
+  buttons.forEach((button) => {
+  
+    button.addEventListener("click", () => {
+  
+      const card = button.closest(".card");
+  
+      const productName =
+      card.querySelector("h3").innerText;
+  
+      const productPrice =
+      card.querySelector(".price").innerText;
+  
+      cart.push({
+        name: productName,
+        price: productPrice
+      });
+  
+      cartCount.innerText = cart.length;
+  
+      updateCart();
+  
+      button.innerText = "Added!";
+  
+      setTimeout(() => {
+        button.innerText = "Add To Cart";
+      }, 1000);
+  
+    });
+  
+  });
+  
+  function updateCart(){
+
+cartItems.innerHTML = "";
+
+let total = 0;
+
+cart.forEach((item, index) => {
+
+  cartItems.innerHTML += `
+  
+    <div class="cart-item">
+
+      <h4>${item.name}</h4>
+
+      <p>${item.price}</p>
+
+      <button class="remove-btn" onclick="removeItem(${index})">
+        Remove
+      </button>
+
+    </div>
+
+  `;
+
+  total += Number(
+    item.price.replace("$","")
+  );
+
+});
+
+document.getElementById("total-price")
+.innerText = total;
+
+}
+
+function removeItem(index){
+
+cart.splice(index, 1);
+
+cartCount.innerText = cart.length;
+
+updateCart();
+
+}
+  
+  cartButton.addEventListener("click", (e) => {
+  
+    e.preventDefault();
+  
+    cartSidebar.classList.add("active");
+  
+  });
+  
+  closeCart.addEventListener("click", () => {
+  
+    cartSidebar.classList.remove("active");
+  
+  });
+  
+  </script>
+<script>
+
+    document.getElementById("checkout-btn")
+    .addEventListener("click", () => {
+    
+      if(cart.length === 0){
+    
+        alert("Your cart is empty.");
+    
+      } else {
+    
+        alert("Proceeding to checkout.");
+    
+      }
+    
+    });
+    
+    </script>
+    
+</body>
+</html>
